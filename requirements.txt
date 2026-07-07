@@ -1,0 +1,27 @@
+# Personal Knowledge Concierge — Dependencies
+# Kaggle 5-Day AI Agents Hackathon
+
+# Web framework & demo UI
+streamlit>=1.31.0
+
+# LLM / Agent — OpenAI-compatible API (DeepSeek, OpenAI, etc.)
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# Data & Knowledge Graph
+networkx>=3.2
+matplotlib>=3.8.0
+
+# HTTP & API
+requests>=2.31.0
+feedparser>=6.0.11
+beautifulsoup4>=4.12.0
+
+# MCP Server
+mcp>=1.0.0
+
+# Security
+# (no extra deps needed — secrets scanning uses stdlib)
+
+# Development
+pre-commit>=3.6.0

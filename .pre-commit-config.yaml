@@ -1,0 +1,32 @@
+# Pre-commit Hooks — Personal Knowledge Concierge
+# =================================================
+# Security gating: runs secret scanning before every commit.
+# Demonstrates the "Security Features" course concept.
+#
+# Setup:
+#   1. pip install pre-commit
+#   2. pre-commit install
+#
+# After setup, `git commit` will automatically run these checks.
+
+repos:
+  - repo: local
+    hooks:
+      - id: scan-secrets
+        name: 🔒 Scan for secrets & API keys
+        description: Block commits that contain API keys, passwords, or credentials
+        entry: python security/scan_secrets.py
+        language: system
+        files: .*
+        stages: [pre-commit]
+        pass_filenames: false
+        verbose: true
+
+      - id: check-env-files
+        name: 🛡️ Verify .env is gitignored
+        description: Ensure .env files are not accidentally committed
+        entry: bash -c 'if git ls-files --error-unmatch .env 2>/dev/null; then echo "ERROR: .env file is tracked by git! Add it to .gitignore."; exit 1; fi'
+        language: system
+        files: ^\.env$
+        stages: [pre-commit]
+        pass_filenames: false

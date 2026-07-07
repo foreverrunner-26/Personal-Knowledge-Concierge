@@ -1,0 +1,17 @@
+[theme]
+base = "light"
+primaryColor = "#3B82F6" # Keep the crisp blue accent for actions
+backgroundColor = "#F9F9F8" # Warm, breathable off-white/beige
+secondaryBackgroundColor = "#F0F0EE" # Slightly darker for sidebar and cards
+textColor = "#18181B" # Near-black for maximum text legibility
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal" # Hides the default Streamlit hamburger menu for a cleaner demo
+
+[browser]
+gatherUsageStats = false
+
+[server]
+enableXsrfProtection = true
+maxUploadSize = 10
