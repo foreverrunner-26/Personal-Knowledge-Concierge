@@ -109,7 +109,7 @@ This project explicitly implements key requirements from the Kaggle AI Agents co
 Bash
 
 ```
-git clone <your-repo-url>
+git clone https://github.com/foreverrunner-26/Personal-Knowledge-Concierge.git
 cd 5_day_AI_agents
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
